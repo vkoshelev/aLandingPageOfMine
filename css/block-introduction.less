@@ -1,0 +1,125 @@
+@import (reference) "variables.less";
+
+.introduction-block() {
+  .introduction {
+    background-color: @oddSectionColor;
+    padding: 39px 0 33px 0;
+    .description-content {
+      height: 100%;
+      max-width: @maxContentWidth;
+      padding: @defaultContentPadding;
+      margin: 0 auto;
+      text-align: justify;
+      width: 100%;
+      position: relative;
+      .description-image {
+        padding: 0 16px 16px 16px;
+      }
+      .description-text {
+        font-family: 'Open Sans', Arial, sans-serif;
+        line-height: 24px;
+        .text-emphasized {
+          font-weight: bold;
+        }
+      }
+      .description-list {
+        color: @iconListColor;
+        position: relative;
+        text-align: center;
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+
+        &_item {
+          font-family: 'Droid Sans', Arial, sans-serif;
+          font-size: 14px;
+          margin: 30px 0;
+          &:before {
+            content: "\e902";
+            .font-icon;
+            position: absolute;
+            font-size: 31px;
+            vertical-align: -2px;
+            margin: -6px 0 0 -43px;
+            text-shadow: 1px 1px 5px #7abdda;
+            transition: all 0.1s ease;
+          }
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: @linkHover;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 550px) {
+    .introduction {
+      background-color: @oddSectionColor;
+      padding: 39px 0 33px 0;
+      .description-content {
+        height: 100%;
+        max-width: @maxContentWidth;
+        padding: @defaultContentPadding;
+        margin: 0 auto;
+        text-align: justify;
+        width: 100%;
+        position: relative;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        .description-image {
+          padding: 0 36px 0 16px;
+          -webkit-flex: 0 0 290px;
+          -ms-flex: 0 0 290px;
+          flex: 0 0 290px;
+        }
+        .description-text {
+          font-family: 'Open Sans', Arial, sans-serif;
+          line-height: 24px;
+          -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          .text-emphasized {
+            font-weight: bold;
+          }
+        }
+        .description-list {
+          color: @iconListColor;
+          position: relative;
+          width: auto;
+          text-align: left;
+          margin-left: 2px;
+          &_item {
+            font-family: 'Droid Sans', Arial, sans-serif;
+            font-size: 14px;
+            display: inline-block;
+            margin: 18px 65px 0 37px;
+            &:before {
+              content: "\e902";
+              .font-icon;
+              position: absolute;
+              font-size: 31px;
+              vertical-align: -2px;
+              margin: -6px 0 0 -43px;
+              text-shadow: 1px 1px 5px #7abdda;
+              transition: all 0.1s ease;
+            }
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+              color: @linkHover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

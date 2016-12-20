@@ -1,0 +1,36 @@
+@import (reference) "variables.less";
+
+.navigation-block() {
+  .navigation {
+    background-color: @evenSectionColor;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+    &-index {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 auto;
+      max-width: @maxContentWidth;
+      padding: @defaultContentPadding;
+      list-style-type: none;
+      padding: 0;
+      overflow: hidden;
+    }
+    &-section {
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        color: @linkHover;
+        text-decoration: underline;
+      }
+      a {
+        color: #000000;
+      }
+    }
+  }
+}

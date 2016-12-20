@@ -1,0 +1,184 @@
+@import (reference) "variables.less";
+
+.backup-block() {
+  .backup {
+    padding: 54px 10px 55px 10px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    background-color: @oddSectionColor;
+    &-content {
+      max-width: @maxContentWidth;
+      padding: @defaultContentPadding;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding-left: 0 !important;
+    }
+    &-subheading {
+      font-family: "Open Sans Bold", Arial, sans-serif;
+      font-size: 14px;
+    }
+    &-text {
+      line-height: 20px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        border-top: 1px solid @deviderColor;
+      }
+      .list-iconic {
+        margin-left: 50px;
+        &_item {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &-aside {
+      margin-top: 27px;
+      margin-left: 0;
+      &._comment {
+        font-family: "Droid Sans", Arial, sans-serif;
+        font-size: 13px;
+      }
+      &_image {
+        width: 290px;
+        height: 175px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .backup {
+      &-article,
+      &-content {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      &-list {
+        list-style-position: inside;
+        li {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .backup {
+      padding: 54px 10px 55px 10px;
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 14px;
+      width: 100%;
+      position: relative;
+      background-color: @oddSectionColor;
+      &-content {
+        max-width: @maxContentWidth;
+        padding: @defaultContentPadding;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-left: 0 !important;
+      }
+      &-subheading {
+        font-family: "Open Sans Bold", Arial, sans-serif;
+        font-size: 14px;
+        margin-bottom: 17px;
+      }
+      &-video {
+        position: relative;
+        margin-left: 18px;
+        &_iframe {
+          position: relative;
+          display: block;
+          width: 290px;
+          height: 165px;
+        }
+      }
+      &-list {
+        padding-left: 0;
+        margin: 14px 0 24px 19px;
+        list-style: disc;
+        &_item {
+          padding-left: 4px;
+          line-height: 20px;
+          margin: 0 0 18px 0;
+          text-indent: 0;
+        }
+      }
+      &-text {
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        .list-iconic {
+          margin-left: 0;
+          margin-top: 11px;
+
+          &_item {
+            &:nth-of-type(1) {
+              margin-bottom: 2px;
+            }
+          }
+        }
+      }
+      &-aside {
+        margin-top: 1px;
+        margin-left: 18px;
+        -webkit-flex: 0 0 290px;
+        -ms-flex: 0 0 290px;
+        flex: 0 0 290px;
+        &_comment {
+          font-family: "Droid Sans", Arial, sans-serif;
+          font-size: 13px;
+          text-align: center;
+        }
+        &_image {
+          width: 290px;
+          height: 175px;
+          :hover {
+            cursor: pointer;
+          }
+        }
+      }
+      &-video {
+        margin-top: 1px;
+      }
+      .recovery-diagram {
+        border: 1px solid @deviderColor;
+        margin: 15px 0;
+        padding: 15px 0 15px 0;
+      }
+      .supported {
+        float: left;
+        &-list {
+          float: right;
+        }
+      }
+      &-article {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        display: -ms-flexbox;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          .separator();
+        }
+        p {
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
+}

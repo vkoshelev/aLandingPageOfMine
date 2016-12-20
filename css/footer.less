@@ -1,0 +1,287 @@
+@import (reference) "variables.less";
+
+.footer {
+  line-height: 20px;
+  background-color: @footersBackground;
+  color: @footersColor;
+  height: 363px;
+  padding: 26px 0 0 0;
+  &-links {
+    max-width: @maxContentWidth;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 12px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+  }
+  &-legal {
+    height: 55px;
+    margin-left: 3px;
+    padding: 0 69px 0 0;
+    position: relative;
+    &:after {
+      content: '';
+      width: 0;
+      height: 96px;
+      position: absolute;
+      border: @footerLines;
+      top: 0;
+      right: 0;
+    }
+  }
+  &-categories {
+    text-transform: uppercase;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 52px;
+    -webkit-column-gap: 52px;
+    column-gap: 52px;
+    padding: 0 20px 0 0;
+    margin: 0 0 0 44px;
+    position: relative;
+    &:after {
+      content: '';
+      width: 0;
+      height: 96px;
+      position: absolute;
+      border: @footerLines;
+      top: 0;
+      right: 0;
+    }
+    &_wpapers,
+    &_webinars,
+    &_demos,
+    &_lorem,
+    &_live {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+  &-networks {
+    text-transform: uppercase;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    margin-left: 74px;
+    -moz-column-gap: 52px;
+    -webkit-column-gap: 52px;
+    column-gap: 83px;
+    -webkit-align-items: center; /* Safari */
+    align-items: center;
+    li {
+      margin-bottom: 9px;
+    }
+    &_fb {
+      &:before {
+        content: '\f082';
+        .font-awesome;
+      }
+    }
+    &_tw {
+      &:before {
+        content: '\f081';
+        .font-awesome;
+      }
+    }
+    &_linkedin {
+      &:before {
+        content: '\f08c';
+        .font-awesome;
+      }
+    }
+    &_youtube {
+      &:before {
+        content: '\f166';
+        .font-awesome;
+      }
+    }
+    &_fb,
+    &_tw,
+    &_linkedin,
+    &_youtube {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    &-links {
+      -webkit-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+      -webkit-align-items: center;
+      align-items: center;
+      justify-content: space-between;
+      align-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    &-legal {
+      height: auto;
+      padding: 0;
+      position: relative;
+      margin-bottom: 30px;
+      &:after {
+        display: none;
+        content: '';
+        width: 300px;
+        height: 0;
+        position: absolute;
+        border: @footerLines;
+        top: 0;
+        right: 0;
+      }
+    }
+    &-categories {
+      text-transform: uppercase;
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+      -moz-column-gap: 52px;
+      -webkit-column-gap: 52px;
+      column-gap: 52px;
+      padding: 0;
+      margin: 0 0 30px 0;
+      position: relative;
+      &:after {
+        display: none;
+        content: '';
+        width: 300px;
+        height: 0;
+        position: absolute;
+        border: @footerLines;
+        top: 0;
+        right: 0;
+      }
+    }
+    &-networks {
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+      margin-left: 0;
+      -moz-column-gap: 52px;
+      -webkit-column-gap: 52px;
+      column-gap: 83px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    line-height: 20px;
+    background-color: @footersBackground;
+    color: @footersColor;
+    height: 363px;
+    padding: 26px 0 0 0;
+    &-links {
+      max-width: @maxContentWidth;
+      width: 100%;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 12px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+      -webkit-align-items: center;
+      align-items: center;
+      align-content: center;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    &-legal {
+      height: 55px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    &-categories {
+      text-transform: uppercase;
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+      padding: 0 20px 0 0;
+      position: relative;
+      margin-bottom: 20px;
+      &_wpapers,
+      &_webinars,
+      &_demos,
+      &_lorem,
+      &_live {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    &-networks {
+      text-transform: uppercase;
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+      margin-left: 0;
+      &_fb {
+        &:before {
+          content: '\f082';
+          .font-awesome;
+        }
+      }
+      &_tw {
+        &:before {
+          content: '\f081';
+          .font-awesome;
+        }
+      }
+      &_linkedin {
+        &:before {
+          content: '\f08c';
+          .font-awesome;
+        }
+      }
+      &_youtube {
+        &:before {
+          content: '\f166';
+          .font-awesome;
+        }
+      }
+      &_fb,
+      &_tw,
+      &_linkedin,
+      &_youtube {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+

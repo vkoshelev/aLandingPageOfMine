@@ -1,0 +1,194 @@
+@import (reference) "variables.less";
+
+.recovery-block() {
+
+  .recovery {
+    max-width: @maxContentWidth;
+    margin: 0 auto;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    padding-top: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    &-columns {
+      line-height: 20px;
+    }
+    &-content {
+      box-sizing: border-box;
+      padding-left: 0 !important;
+    }
+    &-heading {
+      margin: 54px 0 43px 0;
+    }
+    &-article {
+      line-height: 20px;
+      padding-top: 45px;
+      &_text {
+        margin-top: 14px;
+        margin-bottom: 34px;
+      }
+    }
+    &-list {
+      padding-left: 18px;
+      margin: 20px 0 0 0;
+
+    }
+    &_item {
+      list-style-type: disc;
+      padding-left: 4px;
+      line-height: 20px;
+      margin: 0 0 4px 0;
+    }
+    &-aside {
+      box-sizing: border-box;
+      margin-left: 0;
+      &_image {
+        width: 290px;
+        height: 175px;
+      }
+      &_comment {
+        margin-top: -9px;
+      }
+    }
+    ._iconic-list {
+
+    }
+    .recovery-diagram {
+      border: 1px solid @deviderColor;
+      margin: 15px 0;
+      padding: 15px 0 15px 0;
+    }
+    &-subheading {
+      font-family: "Open Sans Bold", Arial, sans-serif;
+      font-size: 14px;
+    }
+    .recovery-supported {
+      display: block;
+      line-height: 32px;
+      margin-top: 9px;
+      &_list {
+        column-count: 1;
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        display: block;
+        margin: 0 auto;
+        width: 212px;
+      }
+      &_item {
+        list-style: disc;
+        padding-left: 3px;
+        margin-left: 10px;
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .recovery {
+      max-width: @maxContentWidth;
+      margin: 0 auto;
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 14px;
+      padding-top: 35px;
+      width: 100%;
+      position: relative;
+      &-columns {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        line-height: 20px;
+      }
+      &-content {
+        box-sizing: border-box;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+      }
+      &-heading {
+        margin: 54px 0 43px 0;
+      }
+      &-article {
+        .separator();
+        &_text {
+          margin-top: 14px;
+          margin-bottom: 34px;
+        }
+      }
+      &-list {
+        padding-left: 18px;
+        margin: 20px 0 0 0;
+        &.list-iconic {
+          li {
+            margin-bottom: 2px;
+          }
+        }
+      }
+      &_item {
+        list-style-type: disc;
+        padding-left: 4px;
+        line-height: 20px;
+        margin: 0 0 4px 0;
+      }
+      &-aside {
+        box-sizing: border-box;
+        margin-left: 23px;
+        &_image {
+          width: 290px;
+          height: 175px;
+        }
+        &_comment {
+          margin-top: -9px;
+        }
+      }
+      ._iconic-list {
+
+      }
+      .recovery-diagram {
+        border: 1px solid @deviderColor;
+        margin: 15px 0;
+        padding: 15px 0 15px 0;
+      }
+      &-subheading {
+        font-family: "Open Sans Bold", Arial, sans-serif;
+        font-size: 14px;
+      }
+      .recovery-supported {
+        display: -webkit-flex;
+        display: flex;
+        display: -ms-flexbox;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        line-height: 32px;
+        margin-top: 9px;
+        &_list {
+          column-count: 2;
+          -moz-column-count: 2;
+          -webkit-column-count: 2;
+          margin-bottom: -11px;
+          margin-left: 72px;
+          width: auto;
+        }
+        &_item {
+          list-style: disc;
+          padding-left: 3px;
+          margin-left: 10px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}
+
+
+

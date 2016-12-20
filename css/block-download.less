@@ -1,0 +1,295 @@
+@import (reference) "variables.less";
+
+.download-block() {
+    .partner-logo {
+      display: none;
+    }
+    .download-background {
+      padding: 15px 0 0 0;;
+      .download {
+        background-color: @headersEmphasis;
+        color: @headerMainColor;
+        height: auto;
+        padding: 25px 10px 30px 10px;
+        margin: 0 auto;
+        &_description {
+          position: relative;
+        }
+        &_heading {
+          font-family: 'Open Sans Bold', Arial, sans-serif;
+          font-size: 22px;
+          display: block;
+          margin-top: 10px;
+        }
+        &_label {
+          background-color: white;
+          color: #f13037;
+          display: block;
+          font-size: 30px;
+          font-family: 'Open Sans Bold', Arial, sans-serif;
+          font-weight: bold;
+          height: 45px;
+          line-height: 45px;
+          margin: 0 auto;
+          text-align: center;
+          text-transform: uppercase;
+          width: 100px;
+        }
+        &_text {
+          font-size: 20px;
+          font-family: 'Open Sans', Arial, sans-serif;
+          text-align: center;
+          margin-top: 5px;
+          margin-bottom: 20px;
+        }
+        &-form {
+          margin: 0 auto;
+          text-align: center;
+          background-color: @formColor;
+          height: 465px;
+          padding: 18px 15px 0 15px;
+          border: 4px solid #0083CE;
+          &_heading {
+            font-size: 18px;
+            font-family: 'Open Sans Bold', Arial, sans-serif;
+            &:nth-of-type(2) {
+              margin: 11px 0;
+            }
+          }
+          input, select {
+            font-size: 14px;
+            margin: 4px 0;
+            height: 42px;
+            width: 100%;
+          }
+          #download-button {
+            background-color: @downloadBackgroundColor;
+            color: @downloadFontColor;
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            margin: 19px 0;
+          }
+        }
+      }
+    }
+
+
+
+  @media only screen and (max-width: 400px) {
+    .download-background {
+      .download {
+        &-form {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 400px) {
+    .download-background {
+      .download {
+        &-form {
+          width: 365px;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 550px) {
+    .partner-logo {
+      display: block;
+    }
+    .download-background {
+      background: url(../images/VAS_alliance.jpg) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      padding-top: 25px;
+      .download {
+        background-color: @headersEmphasis;
+        color: @headerMainColor;
+        max-width: 940px;
+        height: auto;
+        padding: 25px 15px 30px 45px;
+        margin: 0 auto;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        -webkit-align-items: center;
+        align-items: center;
+        align-content: center;
+        &_description {
+          position: relative;
+        }
+        &_heading {
+          font-family: 'Open Sans Bold', Arial, sans-serif;
+          font-size: 30px;
+          display: inline-block;
+        }
+        &_label {
+          background-color: white;
+          color: #f13037;
+          display: block;
+          font-size: 30px;
+          font-family: 'Open Sans Bold', Arial, sans-serif;
+          font-weight: bold;
+          height: 45px;
+          line-height: 45px;
+          margin: 0 auto;
+          text-align: center;
+          text-transform: uppercase;
+          width: 100px;
+        }
+        &_text {
+          font-size: 30px;
+          font-family: 'Open Sans', Arial, sans-serif;
+        }
+        &-form {
+          -webkit-flex: 0 0 365px;
+          -ms-flex: 0 0 365px;
+          flex: 0 0 365px;
+          max-width: 365px;
+          height: 465px;
+          text-align: center;
+          background-color: @formColor;
+          padding: 18px 0 0 0;
+          border: 4px solid #0083CE;
+
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-items: center;
+            align-items: center;
+            align-content: center;
+margin: 0;
+          &_heading {
+            font-size: 18px;
+            font-family: 'Open Sans Bold', Arial, sans-serif;
+            &:nth-of-type(2) {
+              margin: 11px 0;
+            }
+          }
+          input, select {
+            font-size: 14px;
+            margin: 4px 0;
+            height: 42px;
+            width: 330px;
+          }
+          #download-button {
+            background-color: @downloadBackgroundColor;
+            color: @downloadFontColor;
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            margin: 19px 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 920px) {
+    .partner-logo {
+      display: block;
+      float: left;
+    }
+    .download-background {
+      background: url(../images/VAS_alliance.jpg) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      padding-top: 25px;
+      padding-bottom: 58px;
+      .download {
+        background-color: @headersEmphasis;
+        color: @headerMainColor;
+        max-width: 940px;
+        height: auto;
+        padding: 25px 15px 30px 45px;
+        margin: 0 auto;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        &_description {
+          position: relative;
+        }
+        &_heading {
+          font-family: 'Open Sans Bold', Arial, sans-serif;
+          font-size: 30px;
+          display: inline-block;
+        }
+        &_label {
+          background-color: white;
+          color: #f13037;
+          display: block;
+          font-size: 30px;
+          font-family: 'Open Sans Bold', Arial, sans-serif;
+          font-weight: bold;
+          height: 45px;
+          line-height: 45px;
+          margin: 45px 0 27px 0;
+          text-align: center;
+          text-transform: uppercase;
+          width: 100px;
+        }
+        &_text {
+          font-size: 30px;
+          font-family: 'Open Sans', Arial, sans-serif;
+          text-align: left;
+          line-height: 38px;
+        }
+        &-form {
+          -webkit-flex: 0 0 369px;
+          -ms-flex: 0 0 369px;
+          flex: 0 0 369px;
+          max-width: 369px;
+          height: 469px;
+          text-align: center;
+          background-color: @formColor;
+          padding: 18px 0 0 0;
+          border: 4px solid #0083CE;
+          margin-right: 0;
+          &_heading {
+            font-size: 18px;
+            font-family: 'Open Sans Bold', Arial, sans-serif;
+            &:nth-of-type(2) {
+              margin: 11px 0;
+            }
+          }
+          &-input {
+            border: 1px solid @inputBorder;
+            &:nth-child(7) {
+              font-size: 18px;
+            }
+          }
+          #download-button {
+            background-color: @downloadBackgroundColor;
+            color: @downloadFontColor;
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            margin: 19px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
